@@ -175,13 +175,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
                     <li class="nav-item">
-                        <a class="nav-link text-center active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-center" href="./DATE.html">Week Day</a>
+                        <a class="nav-link" href="./DATE.html">Week Day</a>
                     </li>
                 </ul>
-                <button onclick="NightMode()" style="font-size: 20px; border-radius:5px; width: 100%;">Night Mode</button>
+                <button onclick="NightMode()" style="font-size: 20px; border-radius:5px;" id="btn-1">Night Mode</button>
             </div>
         </div>
     </nav>
@@ -190,7 +190,7 @@
     <div class="container">
         <div class="jumbotron my-4">
             <h1 class="display-4 center-class" style="font-weight : bold; " id="c2">CLOCK SHOWER</h1>
-            <h2 class="lead center-class" style="font-size: 35px; ">Current Time is <span id="time"></span></h2>
+            <h2 class="lead center-class" style="font-size: 35px;">Current Time is <span id="time"></span></h2>
             <hr class="my-4">
             <div id="id1">
                 <button class="btn btn-primary center-class" style="align-items: center;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
@@ -258,6 +258,24 @@
             width: 100%;
             justify-content: center;
             align-items: center;
+        }
+
+        li a{
+            text-align: center;
+        }
+
+        #btn-1{
+            width: 100%;
+        }
+
+        @media screen and (min-width:720px) {
+            li{
+                align-items: none;
+            }
+
+            #btn-1{
+                width: auto;
+            }
         }
     </style>
 </body>
