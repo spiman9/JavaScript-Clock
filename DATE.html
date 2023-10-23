@@ -7,52 +7,24 @@
 
 <body>
     <div class="container">
-        <h1>Perfectoo!!! Habibi Welcome to Week Show</h1>
-        <p>Whats Up Guys! hope You are well on the other side</p>
-        <strong>Todays Week Day is : <span id="day"></span></strong>
+        <h1>Todays Week Day is </h1>
+        <h1 id="day">Loading........</h1>
     </div>
+
     <style>
-        body {
-            padding: 0;
+        *{
             margin: 0;
-            font-size: 50px;
-        }
-
-        .container {
+            padding: 0;
             color: white;
-            width: 100vw;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             height: 100vh;
-            background-image: url('https://image.shutterstock.com/image-vector/week-concept-colorful-vector-symbols-260nw-175520912.jpg');
-            background-size: cover;
-            opacity: 01;
-            text-align: center;
-            text-decoration: underline;
-        }
-
-        h1 {
-            background-color: grey;
-            opacity: 0.7;
-        }
-
-        p {
-            background-color: yellow;
-            opacity: 0.5;
-            color: black;
-        }
-
-        span {
-            color: red;
             background-color: black;
-        }
-
-
-        strong {
-            background-color: red;
-            opacity: 0.9;
-        }
-
-        .colorchange {
-            color: black;
         }
     </style>
     <script>

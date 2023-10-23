@@ -56,17 +56,18 @@
                 ans = "0" + dm;
             }
             document.getElementById('yes3').innerHTML = ans;
-            if (dm == 0) {
-                document.getElementById('showup').innerHTML = "<b>PRITHAM</b>";
-            } else {
-                document.getElementById('showup').innerHTML = "";
-            }
 
 
             if (dm % 2 == 0) {
                 document.getElementById('c1').style.color = "red";
             } else {
                 document.getElementById('c1').style.color = "Black";
+            }
+
+            if(dm % 2 == 0){
+                document.getElementById('c2').style.color = "red";
+            } else {
+                document.getElementById('c2').style.color = "Black";
             }
         }, 1000);
 
@@ -114,18 +115,11 @@
         .container-1 {
             display: flex;
             flex-direction: row;
-            margin-left: 30vw;
             flex-wrap: nowrap;
             width: 390px;
             border: 5px solid rgb(30, 255, 0);
         }
 
-        #showup {
-            position: relative;
-            margin-left: 27vw;
-            font-weight: bold;
-            font-size: 100px;
-        }
 
         .center-class{
             text-align: center;
@@ -136,29 +130,52 @@
             color: white;
             font-size: 14px;
         }
+
+        #id1{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id1 button{
+            width: 100%;
+            border-radius: 20px;
+            padding: 10px 0;
+            transition: all 0.5s;
+            border: none;
+        }
+
+        #id1 button:hover{
+            background-color: greenyellow;
+            color: black;
+
+        }
+
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Pritham Timer Clock</a>
+            <h2><a class="navbar-brand" href="#">Pritham Timer Clock</a></h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Clock Project/DATE.html">Week Day</a>
+                        <a class="nav-link" href="./DATE.html">Week Day</a>
                     </li>
                 </ul>
-                <button style="border-radius:5px;" onclick="NightMode()">Night Mode</button>
+                <button onclick="NightMode()" style="font-size: 20px; border-radius:5px;">Night Mode</button>
             </div>
         </div>
     </nav>
@@ -166,18 +183,21 @@
 
     <div class="container">
         <div class="jumbotron my-4">
-            <h1 class="display-4 center-class">CLOCK SHOWER</h1>
-            <h2 class="lead center-class" style="font-size: 15px;">current Time is : <span id="time"></span></h2>
+            <h1 class="display-4 center-class" style="font-weight : bold; " id="c2">CLOCK SHOWER</h1>
+            <h2 class="lead center-class" style="font-size: 35px; ">Current Time is : <span id="time"></span></h2>
             <hr class="my-4">
-            <button class="btn btn-primary center-class" style="align-items: center;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-                aria-controls="offcanvasTop">Date</button>
+            <div id="id1">
+                <button class="btn btn-primary center-class" style="align-items: center;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop" >Date</button>
+            </div>
+            
 
             <div class="offcanvas offcanvas-top red-class" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                 <div class="offcanvas-header">
 
-                    <div class="container ">
-                        <h1 class="center-class">Hello Bro</h1>
-                        <h2 class="lead-center center-class"><br> current Date is : <span id="time1"></span></h2>
+                    <div class="container">
+                        <h1 class="center-class">Date</h1>
+                        <h2 class="lead-center center-class"><br>Current Date is : <span id="time1"></span></h2>
                     </div>
 
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -193,7 +213,7 @@
     </div>
 
     <hr>
-    <h1 style="margin-left: 35vw;" id="c1"><b>
+    <h1 style="text-align:center;" id="c1"><b>
             TIMER CLOCK
         </b>
     </h1>
@@ -213,7 +233,6 @@
     <hr>
 
 
-    <div class="container" id="showup"></div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -226,6 +245,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+
+    <style>
+        .e1{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </body>
 
 </html>
