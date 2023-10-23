@@ -120,6 +120,12 @@
             border: 5px solid rgb(30, 255, 0);
         }
 
+        @media screen and (max-width: 400px) {
+            .container-1 {
+                width: 300px;
+            }
+        }
+
 
         .center-class{
             text-align: center;
@@ -169,13 +175,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-center active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./DATE.html">Week Day</a>
+                        <a class="nav-link text-center" href="./DATE.html">Week Day</a>
                     </li>
                 </ul>
-                <button onclick="NightMode()" style="font-size: 20px; border-radius:5px;">Night Mode</button>
+                <button onclick="NightMode()" style="font-size: 20px; border-radius:5px; width: 100%;">Night Mode</button>
             </div>
         </div>
     </nav>
